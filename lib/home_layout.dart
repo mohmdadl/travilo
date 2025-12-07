@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/feature/expolre/presentation/views/explore_view.dart';
+import 'package:travilo/features/expolre/presentation/views/explore_view.dart';
 
 import 'package:flutter/cupertino.dart';
 

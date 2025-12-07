@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/feature/expolre/presentation/views/widgets/explore_card.dart';
-import 'package:travilo/feature/expolre/presentation/views/widgets/explore_header.dart';
-import 'package:travilo/feature/expolre/presentation/views/widgets/search_bar_explore.dart';
-import 'package:travilo/feature/expolre/presentation/views/widgets/see_more.dart';
+import 'package:travilo/features/expolre/presentation/views/widgets/explore_card.dart';
+import 'package:travilo/features/expolre/presentation/views/widgets/explore_header.dart';
+import 'package:travilo/features/expolre/presentation/views/widgets/search_bar_explore.dart';
+import 'package:travilo/features/expolre/presentation/views/widgets/see_more.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});

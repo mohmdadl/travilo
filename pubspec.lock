@@ -224,14 +224,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.1"
-  stylish_bottom_bar:
-    dependency: "direct main"
-    description:
-      name: stylish_bottom_bar
-      sha256: "8bd394d51e3c1d93a3013fd35e7f77ca29f820df204d0f8580f4773fc660e750"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.1"
   term_glyph:
     dependency: transitive
     description:
@@ -248,8 +240,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.7"
-<<<<<<< HEAD
-=======
   typed_data:
     dependency: transitive
     description:
@@ -282,7 +272,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.19"
->>>>>>> 68743e552a202bedd06e848dd1457211831679b0
   vector_math:
     dependency: transitive
     description:
