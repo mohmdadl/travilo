@@ -27,6 +27,10 @@ abstract class AppStyles
       fontWeight: FontWeight.w500,
       fontSize: 18
   );
+  static const textStyleMedium16= TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 16
+  );
   static const textStyleExtraLight18= TextStyle(
       fontWeight: FontWeight.w300,
       fontSize: 18
