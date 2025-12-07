@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/utils/styles.dart';
 import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
 
 class ConfirmPasswordField extends StatelessWidget {
@@ -21,7 +19,7 @@ class ConfirmPasswordField extends StatelessWidget {
       prefixIcon: const Icon(
         Icons.lock,
       ),
-      hintText: Text("Confirm Your Password",style: AppStyles.textStyleExtraLight24),
+      hintText:"Confirm Your Password",
       controller: confirmPasswordController,
       obscureText: visible,
       validator: (value) {
@@ -33,7 +31,7 @@ class ConfirmPasswordField extends StatelessWidget {
       suffixIcon: IconButton(
         onPressed: toggleVisibility,
         icon: Icon(
-          visible ? Icons.visibility_off : Icons.visibility,
+          visible ? Icons.visibility_off: Icons.visibility,
         ),
       ),
     );

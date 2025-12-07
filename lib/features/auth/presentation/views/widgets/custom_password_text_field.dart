@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/core/utils/styles.dart';
 import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
 class PasswordField extends StatelessWidget {
   final TextEditingController passwordController;
@@ -17,7 +16,7 @@ class PasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomTextField(
       prefixIcon: const Icon(Icons.lock,),
-      hintText:  Text("Enter Your Password",style: AppStyles.textStyleExtraLight24),
+      hintText:"Enter Your Password",
 
       controller: passwordController,
       obscureText: visible,
