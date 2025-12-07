@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:travilo/home_layout.dart';
 
+=======
+import 'package:travilo/features/auth/presentation/views/sign_in_view.dart';
+
+import 'core/helper_functions/on_generate_routes.dart';
+>>>>>>> 68743e552a202bedd06e848dd1457211831679b0
 
 void main() {
   runApp(const MyApp());
@@ -9,10 +15,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+<<<<<<< HEAD
       
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -24,3 +30,16 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+=======
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+      brightness: Brightness.dark,
+        scaffoldBackgroundColor: Color(0xff101922)
+      ),
+      onGenerateRoute: onGenerateRoutes,
+      initialRoute: SignInView.routeName,
+    );
+  }
+}
+
+>>>>>>> 68743e552a202bedd06e848dd1457211831679b0
