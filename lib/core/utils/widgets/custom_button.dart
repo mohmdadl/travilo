@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../app_color.dart';
 
-class CustomLoginButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final VoidCallback onTap;
   final String text;
 
-  const CustomLoginButton({super.key, required this.onTap, required this.text});
+  const CustomButton({super.key, required this.onTap, required this.text});
 
   @override
   Widget build(BuildContext context) {

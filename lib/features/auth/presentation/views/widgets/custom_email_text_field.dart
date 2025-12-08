@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/styles.dart';
 import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
 
 
@@ -12,7 +11,7 @@ class EmailField extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomTextField(
       prefixIcon: const Icon(Icons.email_outlined,),
-      hintText: Text("Enter your email",style: AppStyles.textStyleExtraLight24),
+      hintText: "Enter your email",
 
       controller: emailController,
       validator: (value) {

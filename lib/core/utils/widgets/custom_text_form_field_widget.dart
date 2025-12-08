@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+
+import '../styles.dart';
 class CustomTextField extends StatelessWidget {
    const CustomTextField({
      super.key,
@@ -21,7 +23,7 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText ;
   final TextEditingController? controller;
    final Widget? labelText;
-   final Widget? hintText;
+   final String? hintText;
    final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
@@ -39,16 +41,14 @@ style: const TextStyle(color: Colors.white),
             filled: true,
             fillColor: Color(0xff233648),
             label:labelText ,
-            hint:hintText ,
+            hintText:hintText ,
 
             prefixIcon:prefixIcon ,
             prefixIconColor: Colors.white,
             suffixIcon: suffixIcon,
 
-              hintStyle: const TextStyle(fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                color:  Color(0xff929BAB)
-              ),
+              hintStyle:AppStyles.textStyleExtraLight18.copyWith(color: Colors.grey),
+
       enabledBorder: buildBorder(),
            focusedBorder: buildBorder(),
             errorBorder: buildBorder(Colors.red),

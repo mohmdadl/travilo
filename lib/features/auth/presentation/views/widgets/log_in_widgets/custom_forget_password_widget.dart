@@ -6,9 +6,9 @@ class CustomForgetPasswordWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  TextButton(
-      onPressed: () {},
-      child:  Text("Forgot Password ?",style:AppStyles.textStyleExtraLight24.copyWith(color: Color(0xff137CE6)),),
+    return  InkWell(
+      onTap: () {},
+      child:  Text("Forgot Password ?",style:AppStyles.textStyleExtraLight16.copyWith(color: Color(0xff137CE6)),),
     );
   }
 }

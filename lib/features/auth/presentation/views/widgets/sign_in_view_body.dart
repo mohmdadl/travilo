@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travilo/core/utils/app_images.dart';
 import 'package:travilo/core/utils/styles.dart';
-
+import 'package:travilo/features/auth/presentation/views/sign_up_view.dart';
+import 'package:travilo/features/auth/presentation/views/widgets/log_in_widgets/custom_forget_password_widget.dart';
 import '../../../../../core/utils/widgets/custom_button.dart';
-
 import 'custom_email_text_field.dart';
 import 'custom_password_text_field.dart';
-import 'custom_remember_me.dart';
-import 'log_in_widgets/navigate_to_sign_up_widget.dart';
+import 'log_in_widgets/custom_text_button_navigation.dart';
 import 'log_in_widgets/social_button_row.dart';
 
 class SignInViewBody extends StatefulWidget {
@@ -71,7 +70,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
 
              Align(
                alignment: Alignment.centerLeft,
-                 child: Text("Email",style:AppStyles.textStyleBold18,)),
+                 child: Text("Email",style:AppStyles.textStyleSemiBold16,)),
               const SizedBox(height: 8),
               EmailField(
                 emailController: emailController),
@@ -80,7 +79,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
 
               Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("password",style:AppStyles.textStyleBold18,)),
+                  child: Text("password",style:AppStyles.textStyleSemiBold16,)),
               const SizedBox(height: 8),
               PasswordField(
                 passwordController: passwordController,
@@ -88,31 +87,29 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 toggleVisibility: toggleVisibility,
               ),
 
-              const SizedBox(height: 18),
+             const SizedBox(height:8 ),
+              Align(
+                alignment: Alignment.topRight,
+                  child: CustomForgetPasswordWidget()),
 
-              // Remember Me + Forgot Password
-              CustomRememberMe(
-                isChecked: rememberMe,
-                onChanged: (v) => setState(() => rememberMe = v),
-              ),
-
-              const SizedBox(height: 18),
-
-
-              CustomLoginButton(
+              const SizedBox(height: 24),
+              CustomButton(
                   onTap: () {},
-                text: "Log In",
+                text: "Sign In",
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 24),
 
-              // Google + Apple Buttons
               const SocialButtonsRow(),
 
               const SizedBox(height: 20),
-
-              // Navigate to signup page
-              const CustomNavigateToSignup(),
+               CustomTextButtonNavigation(
+                text: "Don’t have an account? ",
+                textButton: "Sign Up",
+                onTap: (){
+                  Navigator.of(context).pushNamed(SignUpView.routeName);
+                },
+              ),
             ],
           ),
         ),
