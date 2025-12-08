@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:travilo/features/expolre/presentation/views/widgets/explore_card.dart';
 import 'package:travilo/features/expolre/presentation/views/widgets/explore_header.dart';
-import 'package:travilo/features/expolre/presentation/views/widgets/search_bar_explore.dart';
 import 'package:travilo/features/expolre/presentation/views/widgets/see_more.dart';
 
-class ExploreScreen extends StatelessWidget {
-  const ExploreScreen({super.key});
+class ExploreView extends StatelessWidget {
+  const ExploreView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class ExploreScreen extends StatelessWidget {
               ),
               const SizedBox(height: 15),
 
-              const SearchBarExplore(),
+              const SearchBar(hintText: 'Search hotel, or events',),
 
               const SizedBox(height: 1),
 

@@ -4,7 +4,7 @@ import 'package:travilo/core/utils/app_images.dart';
 import 'package:travilo/core/utils/styles.dart';
 
 import '../../../../../core/utils/widgets/custom_button.dart';
-import 'confirm_passord_field_widget.dart';
+
 import 'custom_email_text_field.dart';
 import 'custom_password_text_field.dart';
 import 'custom_remember_me.dart';

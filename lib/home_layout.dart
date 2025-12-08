@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travilo/features/actevity/persentation/view/actvity_view.dart';
 import 'package:travilo/features/expolre/presentation/views/explore_view.dart';
 
 import 'package:flutter/cupertino.dart';
@@ -17,8 +18,8 @@ class _HomeLayoutState extends State<HomeLayout> {
   final PageController controller = PageController();
 
   final List<Widget> screens = const [
-    //HomeScreen(),
-    ExploreScreen(),
+    ActevityView(),
+    ExploreView(),
    // TripsScreen(), 
    // ActivitiesScreen(),
   ];
