@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travilo/features/actevity/persentation/view/widgets/activity_card.dart';
 import 'package:travilo/features/actevity/persentation/view/widgets/actvity_header.dart';
+
 class ActevityView extends StatelessWidget {
   const ActevityView({super.key});
 
@@ -19,9 +20,7 @@ class ActevityView extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            SearchBar(
-              hintText: 'Search for an activity...',
-            ),
+            SearchBar(hintText: 'Search for an activity...'),
 
             const SizedBox(height: 25),
 
@@ -91,10 +90,7 @@ class ActevityView extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            text,
-            style: const TextStyle(color: Colors.white, fontSize: 15),
-          ),
+          Text(text, style: const TextStyle(color: Colors.white, fontSize: 15)),
           const SizedBox(width: 4),
           Icon(icon, color: Colors.white, size: 20),
         ],

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/features/actevity/persentation/view/actvity_view.dart';
 import 'package:travilo/features/expolre/presentation/views/explore_view.dart';
+import 'package:travilo/features/home/presentation/views/home_view.dart';
 
 import 'package:flutter/cupertino.dart';
 
-
 class HomeLayout extends StatefulWidget {
+  static const String routeName = 'home_layout';
   const HomeLayout({super.key});
 
   @override
@@ -17,17 +17,17 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   final PageController controller = PageController();
 
-  final List<Widget> screens = const [
-    ActevityView(),
-    ExploreView(),
-   // TripsScreen(), 
-   // ActivitiesScreen(),
+  final List<Widget> screens = [
+    const HomeView(), // Index 0
+    const ExploreView(), // Index 1
+    const Scaffold(body: Center(child: Text("Saved"))), // Index 2
+    const Scaffold(body: Center(child: Text("Profile"))), // Index 3
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xff101922),
 
       body: PageView(
         controller: controller,
@@ -50,8 +50,6 @@ class _HomeLayoutState extends State<HomeLayout> {
   }
 }
 
-
-
 class CustomBottomBar extends StatelessWidget {
   final int selected;
   final Function(int) onSelect;
@@ -69,7 +67,6 @@ class CustomBottomBar extends StatelessWidget {
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
- 
           Positioned(
             bottom: 0,
             left: 0,
@@ -85,7 +82,6 @@ class CustomBottomBar extends StatelessWidget {
               ),
             ),
           ),
-
 
           Positioned(
             bottom: 10,
@@ -134,8 +130,6 @@ class CustomBottomBar extends StatelessWidget {
     );
   }
 
-
-
   Widget _item({
     required int index,
     required int selected,
@@ -164,7 +158,7 @@ class CustomBottomBar extends StatelessWidget {
                         blurRadius: 10,
                         spreadRadius: 2,
                         offset: const Offset(0, 4),
-                      )
+                      ),
                     ]
                   : null,
             ),
@@ -181,11 +175,10 @@ class CustomBottomBar extends StatelessWidget {
             label,
             style: TextStyle(
               color: isSelected ? Colors.white : Colors.white54,
-              fontWeight:
-                  isSelected ? FontWeight.bold : FontWeight.normal,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
               fontSize: 12,
             ),
-          )
+          ),
         ],
       ),
     );
