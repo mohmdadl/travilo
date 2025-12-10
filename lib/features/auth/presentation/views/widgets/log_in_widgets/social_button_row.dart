@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:travilo/core/utils/app_images.dart';
 
 class SocialButtonsRow extends StatelessWidget {
   const SocialButtonsRow({super.key});
@@ -8,27 +10,32 @@ class SocialButtonsRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _socialButton("Google", Icons.g_mobiledata),
-        _socialButton("Apple", Icons.apple),
+        Expanded(child: _socialButton("Google", AppImages.iconGoogleImage)),
+        SizedBox(
+          width: 32,
+        ),
+        Expanded(child: _socialButton("Apple", AppImages.iconAppleImage)),
       ],
     );
   }
 
-  Widget _socialButton(String text, IconData icon) {
+  Widget _socialButton(String text, String pathImage) {
+
     return Container(
-      width: 140,
-      height: 48,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Colors.white24),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon),
-          const SizedBox(width: 6),
-          Text(text),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(pathImage),
+            const SizedBox(width: 12),
+            Text(text),
+          ],
+        ),
       ),
     );
   }
