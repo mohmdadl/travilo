@@ -4,10 +4,9 @@ import 'package:travilo/features/expolre/presentation/views/explore_view.dart';
 
 import 'package:flutter/cupertino.dart';
 
-
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
-
+  static const String routeName = 'homeLayout';
   @override
   State<HomeLayout> createState() => _HomeLayoutState();
 }
@@ -20,8 +19,8 @@ class _HomeLayoutState extends State<HomeLayout> {
   final List<Widget> screens = const [
     ActevityView(),
     ExploreView(),
-   // TripsScreen(), 
-   // ActivitiesScreen(),
+    // TripsScreen(),
+    // ActivitiesScreen(),
   ];
 
   @override
@@ -50,8 +49,6 @@ class _HomeLayoutState extends State<HomeLayout> {
   }
 }
 
-
-
 class CustomBottomBar extends StatelessWidget {
   final int selected;
   final Function(int) onSelect;
@@ -69,7 +66,6 @@ class CustomBottomBar extends StatelessWidget {
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
- 
           Positioned(
             bottom: 0,
             left: 0,
@@ -85,7 +81,6 @@ class CustomBottomBar extends StatelessWidget {
               ),
             ),
           ),
-
 
           Positioned(
             bottom: 10,
@@ -134,8 +129,6 @@ class CustomBottomBar extends StatelessWidget {
     );
   }
 
-
-
   Widget _item({
     required int index,
     required int selected,
@@ -164,7 +157,7 @@ class CustomBottomBar extends StatelessWidget {
                         blurRadius: 10,
                         spreadRadius: 2,
                         offset: const Offset(0, 4),
-                      )
+                      ),
                     ]
                   : null,
             ),
@@ -181,11 +174,10 @@ class CustomBottomBar extends StatelessWidget {
             label,
             style: TextStyle(
               color: isSelected ? Colors.white : Colors.white54,
-              fontWeight:
-                  isSelected ? FontWeight.bold : FontWeight.normal,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
               fontSize: 12,
             ),
-          )
+          ),
         ],
       ),
     );
