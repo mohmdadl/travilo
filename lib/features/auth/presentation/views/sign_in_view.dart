@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/features/reviews/presentation/views/favourite_reviews_view.dart';
-import 'package:travilo/features/reviews/presentation/views/rating_all_user_view.dart';
+import 'package:travilo/features/auth/presentation/views/widgets/sign_in_view_body.dart';
+
+
+
 
 
 
@@ -10,7 +12,7 @@ static const String routeName = 'sign-in';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: FavouriteReviewsView(),
+      body: SignInViewBody(),
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:travilo/features/reviews/presentation/views/widgets/fav_review_v
 
 class FavouriteReviewsView extends StatelessWidget {
   const FavouriteReviewsView({super.key});
+  static const String routeName = 'favReview';
 
   @override
   Widget build(BuildContext context) {

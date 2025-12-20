@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travilo/features/reviews/presentation/views/widgets/fav_rating_card.dart';
+
 class FavouriteReviewsViewBody extends StatelessWidget {
   const FavouriteReviewsViewBody({super.key});
 
@@ -8,7 +9,6 @@ class FavouriteReviewsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-       
         Text(
           "5.0",
           style: GoogleFonts.inter(
@@ -18,7 +18,6 @@ class FavouriteReviewsViewBody extends StatelessWidget {
           ),
         ),
 
-        
         const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -30,7 +29,6 @@ class FavouriteReviewsViewBody extends StatelessWidget {
           ],
         ),
 
-       
         Text(
           "Based on 1,103-star reviews",
           style: GoogleFonts.inter(color: Colors.grey, fontSize: 12),
@@ -38,7 +36,6 @@ class FavouriteReviewsViewBody extends StatelessWidget {
 
         const SizedBox(height: 16),
 
-        
         Expanded(
           child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -55,5 +52,3 @@ class FavouriteReviewsViewBody extends StatelessWidget {
     );
   }
 }
-
-
