@@ -103,7 +103,7 @@ class WriteReviewViewBody extends StatelessWidget {
     bool isAction = false,
   }) {
     return Container(
-      width: 80, // حجم ثابت ومناسب
+      width: 80,
       height: 80,
       decoration: BoxDecoration(
         color: const Color(0xFF1E222B),
