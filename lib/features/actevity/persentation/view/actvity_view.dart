@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/features/actevity/persentation/view/widgets/activity_card.dart';
+import 'package:travilo/core/utils/widgets/card_item.dart';
 import 'package:travilo/features/actevity/persentation/view/widgets/actvity_header.dart';
+
 class ActevityView extends StatelessWidget {
   const ActevityView({super.key});
-
+static const String routeName = 'actviety-view';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -19,9 +20,7 @@ class ActevityView extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            SearchBar(
-              hintText: 'Search for an activity...',
-            ),
+            SearchBar(hintText: 'Search for an activity...'),
 
             const SizedBox(height: 25),
 
@@ -38,7 +37,7 @@ class ActevityView extends StatelessWidget {
             const SizedBox(height: 20),
 
             // Cards List
-            ActivityCard(
+            CardItem(
               imagePath: 'assets/images/tour.jpg',
               title: 'Eiffel Tower Summit Tour',
               location: 'Paris, France • Sightseeing',
@@ -51,7 +50,7 @@ class ActevityView extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            ActivityCard(
+            CardItem(
               imagePath: 'assets/images/tour.jpg',
               title: 'Ancient Rome Colosseum',
               location: 'Rome, Italy • Historical Tour',
@@ -64,7 +63,7 @@ class ActevityView extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            ActivityCard(
+            CardItem(
               imagePath: 'assets/images/tour.jpg',
               title: 'Thailand Islands Kayaking',
               location: 'Phuket, Thailand • Adventure',
@@ -91,10 +90,7 @@ class ActevityView extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            text,
-            style: const TextStyle(color: Colors.white, fontSize: 15),
-          ),
+          Text(text, style: const TextStyle(color: Colors.white, fontSize: 15)),
           const SizedBox(width: 4),
           Icon(icon, color: Colors.white, size: 20),
         ],
