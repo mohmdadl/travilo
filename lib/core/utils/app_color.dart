@@ -3,7 +3,8 @@ import 'dart:ui';
 abstract class AppColors {
   // Existing colors
   static const primaryColor = Color(0xffFFFFFF);
-  static const buttonColor = Color(0xFF137FEC);
+  static const buttonColor = Color(0xFF137FEC) ;
+  static const cardColor =Color(0xff233648);
 
   // Home Screen Design Palette
   static const white = Color(0xFFFFFFFF);

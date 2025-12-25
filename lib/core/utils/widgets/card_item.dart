@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 
-class ActivityCard extends StatelessWidget {
+class CardItem extends StatelessWidget {
   final String title;
   final String offer;
   final String location;
@@ -12,7 +12,7 @@ class ActivityCard extends StatelessWidget {
   final String imagePath;
   final VoidCallback onViewDetailsPressed;
 
-  const ActivityCard({
+  const CardItem({
     super.key,
     required this.title,
     required this.location,

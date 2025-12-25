@@ -4,7 +4,6 @@ import 'package:travilo/core/utils/app_images.dart';
 import 'package:travilo/core/utils/styles.dart';
 import 'package:travilo/features/auth/presentation/views/sign_up_view.dart';
 import 'package:travilo/features/auth/presentation/views/widgets/log_in_widgets/custom_forget_password_widget.dart';
-
 import '../../../../../core/utils/widgets/custom_button.dart';
 import 'custom_email_text_field.dart';
 import 'custom_password_text_field.dart';

@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 class HomeLayout extends StatefulWidget {
   static const String routeName = 'home_layout';
   const HomeLayout({super.key});
-
+  static const String routeName = 'homeLayout';
   @override
   State<HomeLayout> createState() => _HomeLayoutState();
 }

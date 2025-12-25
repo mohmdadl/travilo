@@ -5,7 +5,7 @@ import 'package:travilo/features/expolre/presentation/views/widgets/see_more.dar
 
 class ExploreView extends StatelessWidget {
   const ExploreView({super.key});
-
+static const String routeName = 'explore-view';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

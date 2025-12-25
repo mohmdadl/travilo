@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travilo/features/auth/presentation/views/sign_in_view.dart';
-
+import 'package:travilo/features/payment/persentation/view/booking_review_view.dart';
+import 'package:travilo/features/payment/persentation/view/payment_details_view.dart';
 import 'core/helper_functions/on_generate_routes.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
       ),
       onGenerateRoute: onGenerateRoutes,
-      initialRoute: SignInView.routeName,
+      initialRoute: PaymentDetailsView.routeName,
     );
   }
 }
