@@ -8,7 +8,7 @@ import 'package:travilo/features/auth/presentation/views/widgets/sign_in_view_bo
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
-static const String routeName = 'sign-in';
+  static const String routeName = 'sign-in';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

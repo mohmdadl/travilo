@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/features/actevity/persentation/view/actvity_view.dart';
 import 'package:travilo/features/expolre/presentation/views/explore_view.dart';
+import 'package:travilo/features/home/presentation/views/home_view.dart';
 
 import 'package:flutter/cupertino.dart';
 
 class HomeLayout extends StatefulWidget {
+  static const String routeName = 'home_layout';
   const HomeLayout({super.key});
   static const String routeName = 'homeLayout';
   @override
@@ -16,17 +17,17 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   final PageController controller = PageController();
 
-  final List<Widget> screens = const [
-    ActevityView(),
-    ExploreView(),
-    // TripsScreen(),
-    // ActivitiesScreen(),
+  final List<Widget> screens = [
+    const HomeView(), // Index 0
+    const ExploreView(), // Index 1
+    const Scaffold(body: Center(child: Text("Saved"))), // Index 2
+    const Scaffold(body: Center(child: Text("Profile"))), // Index 3
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xff101922),
 
       body: PageView(
         controller: controller,
