@@ -3,6 +3,9 @@ import 'package:travilo/features/actevity/persentation/view/actvity_view.dart';
 import 'package:travilo/features/expolre/presentation/views/explore_view.dart';
 import 'package:travilo/features/payment/persentation/view/booking_review_view.dart';
 import 'package:travilo/features/payment/persentation/view/payment_details_view.dart';
+import 'package:travilo/features/payment/persentation/view/payment_failure_view.dart';
+import 'package:travilo/features/payment/persentation/view/payment_method_view.dart';
+import 'package:travilo/features/payment/persentation/view/payment_success_view.dart';
 import 'package:travilo/features/reviews/presentation/views/favourite_reviews_view.dart';
 import 'package:travilo/features/reviews/presentation/views/rating_all_user_view.dart';
 import 'package:travilo/features/reviews/presentation/views/write_review_view.dart';
@@ -35,6 +38,12 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
        return MaterialPageRoute(builder: (context) => const BookingReviewView());
        case PaymentDetailsView.routeName:
        return MaterialPageRoute(builder: (context) => const PaymentDetailsView());
+       case PaymentMethodView.routeName:
+       return MaterialPageRoute(builder: (context) => const PaymentMethodView());
+       case PaymentSuccessView.routeName:
+       return MaterialPageRoute(builder: (context) => const PaymentSuccessView());
+       case PaymentFailureView.routeName:
+       return MaterialPageRoute(builder: (context) => const PaymentFailureView());
        
 
 
