@@ -11,6 +11,7 @@ import 'package:travilo/features/reviews/presentation/views/rating_all_user_view
 import 'package:travilo/features/reviews/presentation/views/write_review_view.dart';
 import 'package:travilo/home_layout.dart';
 
+import '../../features/auth/presentation/views/forget_password_view.dart';
 import '../../home_layout.dart';
 import '../../features/trips/presentation/views/trips_view.dart';
 import '../../features/auth/presentation/views/sign_in_view.dart';
@@ -26,6 +27,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const SignInView());
     case SignUpView.routeName:
       return MaterialPageRoute(builder: (context) => const SignUpView());
+    case ForgetPasswordView.routeName:
+      return MaterialPageRoute(builder: (context) => const ForgetPasswordView());
        case RatingAllUserView.routeName:
        return MaterialPageRoute(builder: (context) => const RatingAllUserView());
         case HomeLayout.routeName:

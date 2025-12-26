@@ -18,4 +18,13 @@ abstract class AppColors {
   static const borderGray = Color(0xFFDDE1ED);
   static const darkBlue = Color(0xFF204953);
   static const mediumGray = Color(0xFF597B84);
+
+  static const backgroundColor = Color(0xff101922);
+  static const blackBackgroundColor = Color(0xff000000);
+  static const lightBackgroundColor = Color(0xff233648);
+  static const secondBackgroundColor = Color(0xff255483);
+  static const listTileColor = Color(0xff66768D);
+  static const logOutColor = Color(0xFFE36F6F);
+  static const logOutTextColor = Color(0xFF9F2E2E);
+  static const calenderIconColor = Color(0xFF0C97AC);
 }
