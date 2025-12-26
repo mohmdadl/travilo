@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
+import 'app_color.dart';
+
 abstract class AppStyles
 {
   static const textStyleBold24 = TextStyle(
@@ -43,5 +45,36 @@ abstract class AppStyles
       fontWeight: FontWeight.w300,
       fontSize: 14
   );
+
+  static const textStyleBold20 = TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 20,
+      color: AppColors.primaryColor
+
+  );
+  static const textStyleBoldDark20 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 20,
+    color: Color(0xFF707D8F),
+
+  );
+  static const textStyleBoldBlue20 = TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 20,
+      color: AppColors.buttonColor
+
+  );
+  static const textStyleBold34 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 34,
+    color: AppColors.primaryColor,
+  );
+
+  static const textStyleMedium20 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 20,
+    color: Color(0xFF95A4B9),
+  );
+
 
   }
