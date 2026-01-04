@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
+import 'package:travilo/core/resources/app_styles.dart';
+import 'package:travilo/core/widgets/custom_text_field.dart';
+
 class NameField extends StatelessWidget {
   final TextEditingController nameController;
 
@@ -9,7 +11,8 @@ class NameField extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomTextField(
       controller: nameController,
-      validator: (value) => value == null || value.isEmpty ? 'Field is required' : null,
+      validator: (value) =>
+          value == null || value.isEmpty ? 'Field is required' : null,
       prefixIcon: const Icon(Icons.person),
       hintText: "Enter Your Name",
     );

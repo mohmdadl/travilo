@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
+import 'package:travilo/core/resources/app_styles.dart';
+import 'package:travilo/core/widgets/custom_text_field.dart';
 
 class ConfirmPasswordField extends StatelessWidget {
   final TextEditingController confirmPasswordController;
@@ -16,10 +17,8 @@ class ConfirmPasswordField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomTextField(
-      prefixIcon: const Icon(
-        Icons.lock,
-      ),
-      hintText:"Confirm Your Password",
+      prefixIcon: const Icon(Icons.lock),
+      hintText: "Confirm Your Password",
       controller: confirmPasswordController,
       obscureText: visible,
       validator: (value) {
@@ -30,9 +29,7 @@ class ConfirmPasswordField extends StatelessWidget {
       },
       suffixIcon: IconButton(
         onPressed: toggleVisibility,
-        icon: Icon(
-          visible ? Icons.visibility_off: Icons.visibility,
-        ),
+        icon: Icon(visible ? Icons.visibility_off : Icons.visibility),
       ),
     );
   }

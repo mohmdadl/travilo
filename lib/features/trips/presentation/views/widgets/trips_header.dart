@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../../core/utils/app_color.dart';
-import '../../../../../../core/utils/styles.dart';
-import 'package:flutter/material.dart';
-import '../../../../../../core/utils/app_color.dart';
-import '../../../../../../core/utils/styles.dart';
+import 'package:travilo/core/resources/app_colors.dart';
+import 'package:travilo/core/resources/app_styles.dart';
 
 class TripsHeader extends StatelessWidget {
   const TripsHeader({super.key});

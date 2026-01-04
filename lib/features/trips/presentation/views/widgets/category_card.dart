@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/core/utils/app_color.dart';
-import 'package:travilo/core/utils/styles.dart';
+import 'package:travilo/core/resources/app_colors.dart';
+import 'package:travilo/core/resources/app_styles.dart';
 
 class CategoryCard extends StatelessWidget {
   final IconData icon;
