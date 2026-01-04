@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
-
+import 'package:travilo/core/resources/app_styles.dart';
+import 'package:travilo/core/widgets/custom_text_field.dart';
 
 class EmailField extends StatelessWidget {
   final TextEditingController emailController;
@@ -10,7 +10,7 @@ class EmailField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomTextField(
-      prefixIcon: const Icon(Icons.email_outlined,),
+      prefixIcon: const Icon(Icons.email_outlined),
       hintText: "Enter your email",
 
       controller: emailController,

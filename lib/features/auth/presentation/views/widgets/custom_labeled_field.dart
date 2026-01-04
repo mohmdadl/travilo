@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/styles.dart';
+import 'package:travilo/core/resources/app_styles.dart';
 
 class LabeledField extends StatelessWidget {
   final String label;
   final Widget field;
 
-  const LabeledField({
-    super.key,
-    required this.label,
-    required this.field,
-  });
+  const LabeledField({super.key, required this.label, required this.field});
 
   @override
   Widget build(BuildContext context) {

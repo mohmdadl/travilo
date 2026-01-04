@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travilo/core/utils/app_images.dart';
-import 'package:travilo/core/utils/styles.dart';
+
+import 'package:travilo/core/resources/app_images.dart';
+import 'package:travilo/core/resources/app_styles.dart';
 import 'package:travilo/features/auth/presentation/views/sign_up_view.dart';
 import 'package:travilo/features/auth/presentation/views/widgets/log_in_widgets/custom_forget_password_widget.dart';
-import '../../../../../core/utils/widgets/custom_button.dart';
+import 'package:travilo/core/widgets/custom_button.dart';
 import 'custom_email_text_field.dart';
 import 'custom_password_text_field.dart';
 import 'log_in_widgets/custom_text_button_navigation.dart';
@@ -68,18 +69,19 @@ class _SignInViewBodyState extends State<SignInViewBody> {
 
               const SizedBox(height: 24),
 
-             Align(
-               alignment: Alignment.centerLeft,
-                 child: Text("Email",style:AppStyles.textStyleSemiBold16,)),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Email", style: AppStyles.textStyleSemiBold16),
+              ),
               const SizedBox(height: 8),
-              EmailField(
-                emailController: emailController),
+              EmailField(emailController: emailController),
 
               const SizedBox(height: 24),
 
               Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("password",style:AppStyles.textStyleSemiBold16,)),
+                alignment: Alignment.centerLeft,
+                child: Text("password", style: AppStyles.textStyleSemiBold16),
+              ),
               const SizedBox(height: 8),
               PasswordField(
                 passwordController: passwordController,
@@ -87,26 +89,24 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 toggleVisibility: toggleVisibility,
               ),
 
-             const SizedBox(height:8 ),
+              const SizedBox(height: 8),
               Align(
                 alignment: Alignment.topRight,
-                  child: CustomForgetPasswordWidget()),
+                child: CustomForgetPasswordWidget(),
+              ),
 
               const SizedBox(height: 24),
-              CustomButton(
-                  onTap: () {},
-                text: "Sign In",
-              ),
+              CustomButton(onTap: () {}, text: "Sign In"),
 
               const SizedBox(height: 24),
 
               const SocialButtonsRow(),
 
               const SizedBox(height: 20),
-               CustomTextButtonNavigation(
+              CustomTextButtonNavigation(
                 text: "Don’t have an account? ",
                 textButton: "Sign Up",
-                onTap: (){
+                onTap: () {
                   Navigator.of(context).pushNamed(SignUpView.routeName);
                 },
               ),
