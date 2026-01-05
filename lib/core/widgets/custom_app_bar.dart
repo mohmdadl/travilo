@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import '../app_color.dart';
-import '../app_images.dart';
-import '../styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key, required this.title, this.withIcon = false});
@@ -22,10 +19,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         withIcon
             ? IconButton(
-          padding: const EdgeInsets.only(right: 32),
-          onPressed: () {},
-          icon: Image.asset(AppImages.nightModeIcon),
-        )
+                padding: const EdgeInsets.only(right: 32),
+                onPressed: () {},
+                icon: Image.asset(AppImages.nightModeIcon),
+              )
             : const SizedBox(),
       ],
       title: Text(

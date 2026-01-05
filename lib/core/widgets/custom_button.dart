@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:travilo/core/resources/app_colors.dart';
 import 'package:travilo/core/resources/app_images.dart';
 import 'package:travilo/core/resources/app_styles.dart';
