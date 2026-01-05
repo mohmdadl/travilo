@@ -32,9 +32,7 @@ class CustomButton extends StatelessWidget {
           children: [
             Text(
               text,
-              style: AppStyles.textStyleBold24.copyWith(
-                color: AppColors.primaryColor,
-              ),
+              style: AppStyles.textStyleBold24.copyWith(color: AppColors.white),
             ),
             withIcon ? const SizedBox(width: 8) : const SizedBox(),
             withIcon

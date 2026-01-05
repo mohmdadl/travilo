@@ -3,7 +3,7 @@ import 'package:travilo/features/profile/presentation/views/widgets/profile_circ
 
 import '../../../../../core/utils/app_color.dart';
 import '../../../../../core/utils/styles.dart';
-import '../../../../../core/utils/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import '../edit_profile_view.dart';
 
 class TopProfileInfo extends StatelessWidget {

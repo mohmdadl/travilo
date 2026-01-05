@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travilo/features/profile/presentation/views/widgets/top_profile_info.dart';
 
-import '../../../../../core/utils/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import 'input_field_section.dart';
 
 class EditProfileBody extends StatelessWidget {

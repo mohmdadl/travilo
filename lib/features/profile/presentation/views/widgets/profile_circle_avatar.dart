@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_color.dart';
-import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/resources/app_images.dart';
 
 class ProfileCircleAvatar extends StatelessWidget {
   const ProfileCircleAvatar({super.key, this.withEditing = false});

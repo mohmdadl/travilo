@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../core/utils/widgets/custom_button.dart';
-import '../../../../../../core/utils/widgets/custom_rich_text.dart';
-
+import 'package:travilo/core/widgets/custom_button.dart';
+import 'package:travilo/core/widgets/custom_rich_text.dart';
 
 class ForgetPasswordActions extends StatelessWidget {
   const ForgetPasswordActions({super.key});

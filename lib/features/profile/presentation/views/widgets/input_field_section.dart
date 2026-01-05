@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
+import '../../../../../core/widgets/custom_text_form_field.dart';
 import 'date_text_field.dart';
 
 class InputFieldSection extends StatefulWidget {
@@ -22,15 +22,15 @@ class _InputFieldSectionState extends State<InputFieldSection> {
       children: [
         const Text("Full Name", style: AppStyles.textStyleBoldDark20),
         const SizedBox(height: 8),
-        const CustomTextField(),
+        const CustomTextFormField(),
         const SizedBox(height: 16),
         const Text("Email Address", style: AppStyles.textStyleBoldDark20),
         const SizedBox(height: 8),
-        const CustomTextField(),
+        const CustomTextFormField(),
         const SizedBox(height: 16),
         const Text("Phone Number", style: AppStyles.textStyleBoldDark20),
         const SizedBox(height: 8),
-        const CustomTextField(),
+        const CustomTextFormField(),
         const SizedBox(height: 16),
         const Text("Date of Birth", style: AppStyles.textStyleBoldDark20),
         const SizedBox(height: 8),

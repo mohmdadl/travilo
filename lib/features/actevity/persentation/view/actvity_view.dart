@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/core/utils/widgets/card_item.dart';
+
 import 'package:travilo/features/actevity/persentation/view/widgets/actvity_header.dart';
+import 'package:travilo/core/widgets/card_item.dart';
 
 class ActevityView extends StatelessWidget {
   const ActevityView({super.key});
-static const String routeName = 'actviety-view';
+  static const String routeName = 'actviety-view';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

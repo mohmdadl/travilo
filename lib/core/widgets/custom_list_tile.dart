@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../app_color.dart';
-import '../styles.dart';
+import '../utils/app_color.dart';
+import '../utils/styles.dart';
 
 class CustomListTile extends StatelessWidget {
   final String title;

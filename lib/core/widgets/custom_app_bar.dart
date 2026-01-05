@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../resources/app_images.dart';
+import '../utils/app_color.dart';
+import '../utils/styles.dart';
+
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key, required this.title, this.withIcon = false});
 

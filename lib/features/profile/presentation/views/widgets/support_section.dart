@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_color.dart';
-import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/resources/app_images.dart';
 import '../../../../../core/utils/styles.dart';
-import '../../../../../core/utils/widgets/custom_list_tile.dart';
+import '../../../../../core/widgets/custom_list_tile.dart';
 
 class SupportSection extends StatelessWidget {
   const SupportSection({super.key});

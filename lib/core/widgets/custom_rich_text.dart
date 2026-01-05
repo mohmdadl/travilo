@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../styles.dart';
+import '../utils/styles.dart';
+
 class CustomRichText extends StatelessWidget {
   const CustomRichText({
     super.key,
