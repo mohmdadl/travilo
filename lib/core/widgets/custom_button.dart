@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:travilo/core/resources/app_colors.dart';
 import 'package:travilo/core/resources/app_images.dart';
 import 'package:travilo/core/resources/app_styles.dart';
@@ -32,7 +33,9 @@ class CustomButton extends StatelessWidget {
           children: [
             Text(
               text,
-              style: AppStyles.textStyleBold24.copyWith(color: AppColors.white),
+              style: AppStyles.textStyleBold24.copyWith(
+                color: AppColors.primaryColor,
+              ),
             ),
             withIcon ? const SizedBox(width: 8) : const SizedBox(),
             withIcon
