@@ -4,8 +4,21 @@ import 'forget_password_form.dart';
 import 'forget_password_header.dart';
 import 'forget_password_title.dart';
 
-class ForgetPasswordBody extends StatelessWidget {
+class ForgetPasswordBody extends StatefulWidget {
   const ForgetPasswordBody({super.key});
+
+  @override
+  State<ForgetPasswordBody> createState() => _ForgetPasswordBodyState();
+}
+
+class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
+final TextEditingController emailController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose(); // بننضف الذاكرة
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +38,9 @@ class ForgetPasswordBody extends StatelessWidget {
                 SizedBox(height: verticalSpace),
                 const ForgetPasswordTitle(),
                 SizedBox(height: verticalSpace / 2),
-                const ForgetPasswordForm(),
+                ForgetPasswordForm(controller:emailController ,),
                 SizedBox(height: verticalSpace * 1.1),
-                const ForgetPasswordActions()
+                 ForgetPasswordActions(controller: emailController,)
               ],
             ),
           ),

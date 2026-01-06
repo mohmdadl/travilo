@@ -5,7 +5,9 @@ import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
 
 class ForgetPasswordForm extends StatelessWidget {
-  const ForgetPasswordForm({super.key});
+  final TextEditingController controller; // استقبل الهدية
+  const ForgetPasswordForm({super.key, required this.controller});
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,7 @@ class ForgetPasswordForm extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         const CustomTextField(
+          
           hintText: "hello@example.com",
           suffixIcon: Icon(Icons.email_outlined, color: AppColors.primaryColor),
         ),

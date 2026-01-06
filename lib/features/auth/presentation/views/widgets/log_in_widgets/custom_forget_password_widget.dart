@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travilo/features/auth/presentation/views/forget_password_view.dart';
 
 import '../../../../../../core/utils/styles.dart';
 class CustomForgetPasswordWidget extends StatelessWidget {
@@ -7,7 +8,9 @@ class CustomForgetPasswordWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).pushNamed(ForgetPasswordView.routeName);
+      },
       child:  Text("Forgot Password ?",style:AppStyles.textStyleExtraLight16.copyWith(color: Color(0xff137CE6)),),
     );
   }
