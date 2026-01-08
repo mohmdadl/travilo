@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../../core/utils/app_color.dart';
-import '../../../../../../core/utils/app_images.dart';
+import 'package:travilo/core/utils/app_color.dart';
+import 'package:travilo/core/resources/app_images.dart';
 
 class ForgetPasswordHeader extends StatelessWidget {
   const ForgetPasswordHeader({super.key});

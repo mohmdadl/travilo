@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:travilo/core/utils/app_color.dart';
-import 'package:travilo/core/utils/styles.dart';
+import 'package:travilo/core/resources/app_colors.dart';
+import 'package:travilo/core/resources/app_styles.dart';
 import 'package:travilo/features/trips/presentation/views/widgets/category_card.dart';
 import 'package:travilo/features/trips/presentation/views/widgets/popular_tour_card.dart';
 import 'package:travilo/features/trips/presentation/views/widgets/special_offer_card.dart';

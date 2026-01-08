@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/styles.dart';
+import 'package:travilo/core/resources/app_styles.dart';
+
 class CustomTermsAndConditions extends StatelessWidget {
   final bool isChecked;
   final ValueChanged<bool> onChanged;
@@ -17,22 +18,26 @@ class CustomTermsAndConditions extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Checkbox(
-          shape:  RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
           value: isChecked,
           onChanged: (v) => onChanged(v!),
         ),
         Expanded(
           child: Wrap(
-            children:  [
-              Text("I agree to the ",style: AppStyles.textStyleMedium16,),
+            children: [
+              Text("I agree to the ", style: AppStyles.textStyleMedium16),
               Text(
                 "Terms & Conditions",
-                style: AppStyles.textStyleMedium16.copyWith(color: Colors.blueAccent),
+                style: AppStyles.textStyleMedium16.copyWith(
+                  color: Colors.blueAccent,
+                ),
               ),
-              Text(" and ",style: AppStyles.textStyleMedium16,),
+              Text(" and ", style: AppStyles.textStyleMedium16),
               Text(
                 "Privacy Policy.",
-                style: AppStyles.textStyleMedium16.copyWith(color: Colors.blueAccent),
+                style: AppStyles.textStyleMedium16.copyWith(
+                  color: Colors.blueAccent,
+                ),
               ),
             ],
           ),
@@ -41,4 +46,3 @@ class CustomTermsAndConditions extends StatelessWidget {
     );
   }
 }
-

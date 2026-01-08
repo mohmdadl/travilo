@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/core/utils/styles.dart';
-import 'package:travilo/core/utils/widgets/custom_button.dart';
+import 'package:travilo/core/resources/app_styles.dart';
+import 'package:travilo/core/widgets/custom_button.dart';
 import 'package:travilo/features/auth/presentation/views/widgets/custom_email_text_field.dart';
 import 'package:travilo/features/auth/presentation/views/widgets/custom_password_text_field.dart';
 import 'package:travilo/features/auth/presentation/views/widgets/log_in_widgets/custom_text_button_navigation.dart';
@@ -97,10 +97,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               ),
 
               const SizedBox(height: 24),
-              CustomButton(
-                text: "Create Account",
-                onTap: () {},
-              ),
+              CustomButton(text: "Create Account", onTap: () {}),
 
               const SizedBox(height: 24),
               CustomTextButtonNavigation(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travilo/core/utils/app_images.dart';
+import 'package:travilo/core/resources/app_colors.dart';
+import 'package:travilo/core/resources/app_images.dart';
 
 class SocialButtonsRow extends StatelessWidget {
   const SocialButtonsRow({super.key});
@@ -11,16 +12,13 @@ class SocialButtonsRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Expanded(child: _socialButton("Google", AppImages.iconGoogleImage)),
-        SizedBox(
-          width: 32,
-        ),
+        SizedBox(width: 32),
         Expanded(child: _socialButton("Apple", AppImages.iconAppleImage)),
       ],
     );
   }
 
   Widget _socialButton(String text, String pathImage) {
-
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),

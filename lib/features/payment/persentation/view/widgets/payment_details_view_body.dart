@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travilo/core/utils/widgets/custom_button.dart';
+import 'package:travilo/core/widgets/custom_button.dart';
 import 'package:travilo/features/payment/persentation/view/widgets/booking_summary_card.dart';
 import 'package:travilo/features/payment/persentation/view/widgets/custom_text_field.dart';
 import 'package:travilo/features/payment/persentation/view/payment_method_view.dart';

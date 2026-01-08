@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travilo/core/utils/widgets/custom_button.dart';
+import 'package:travilo/core/widgets/custom_button.dart';
 import 'package:travilo/features/reviews/presentation/views/widgets/place_review.dart';
 import 'package:travilo/features/reviews/presentation/views/widgets/rating_section.dart';
 import 'package:travilo/features/reviews/presentation/views/widgets/write_review_section.dart';
