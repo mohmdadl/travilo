@@ -3,6 +3,7 @@ import 'package:travilo/features/expolre/presentation/views/explore_view.dart';
 import 'package:travilo/features/home/presentation/views/home_view.dart';
 
 import 'package:flutter/cupertino.dart';
+import 'package:travilo/features/profile/presentation/views/profile_view.dart';
 
 class HomeLayout extends StatefulWidget {
   static const String routeName = 'home_layout';
@@ -20,7 +21,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     const HomeView(), // Index 0
     const ExploreView(), // Index 1
     const Scaffold(body: Center(child: Text("Saved"))), // Index 2
-    const Scaffold(body: Center(child: Text("Profile"))), // Index 3
+    const ProfileView(), // Index 3
   ];
 
   @override

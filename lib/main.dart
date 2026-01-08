@@ -4,6 +4,7 @@ import 'package:travilo/core/network/dio_client.dart';
 import 'package:travilo/core/utils/pref_helper.dart';
 import 'package:travilo/features/auth/presentation/views/sign_up_view.dart';
 import 'core/helper_functions/on_generate_routes.dart';
+import 'home_layout.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
       ),
       onGenerateRoute: onGenerateRoutes,
-      initialRoute: SignUpView.routeName,
+      initialRoute: HomeLayout.routeName,
     );
   }
 }

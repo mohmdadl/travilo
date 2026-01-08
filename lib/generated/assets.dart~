@@ -2,17 +2,11 @@
 class Assets {
   Assets._();
 
-  static const String iconsAbout = 'assets/icons/about.png';
-  static const String iconsContact = 'assets/icons/contact.png';
-  static const String iconsLanguage = 'assets/icons/language.png';
-  static const String iconsLogOut = 'assets/icons/log_out.png';
-  static const String iconsPolicy = 'assets/icons/policy.png';
   static const String imagesAbout = 'assets/images/About.png';
   static const String imagesAccountSettings = 'assets/images/AccountSettings.png';
   static const String imagesArrowIcon = 'assets/images/ArrowIcon.png';
   static const String imagesBed = 'assets/images/bed.png';
   static const String imagesCurrency = 'assets/images/currency.png';
-  static const String imagesFrame 1335 = 'assets/images/Frame 1335.png';
   static const String imagesHeart = 'assets/images/Heart.png';
   static const String imagesHelp = 'assets/images/help.png';
   static const String imagesHotel = 'assets/images/hotel.jpg';
@@ -28,12 +22,9 @@ class Assets {
   static const String imagesPastTrips = 'assets/images/PastTrips.png';
   static const String imagesPencil = 'assets/images/pencil.png';
   static const String imagesPopular = 'assets/images/popular.png';
-  static const String imagesPrandingText = 'assets/images/pranding_text.png';
   static const String imagesPrivacy = 'assets/images/privacy.png';
   static const String imagesProfileImg = 'assets/images/ProfileImg.jpg';
   static const String imagesPyramids = 'assets/images/pyramids.png';
-  static const String imagesSplashLogo = 'assets/images/splash_logo.png';
   static const String imagesTour = 'assets/images/tour.jpg';
-  static const String imagesTravilo = 'assets/images/travilo.png';
 
 }
