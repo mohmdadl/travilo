@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:travilo/core/resources/app_images.dart';
 import 'package:travilo/core/resources/app_styles.dart';
+
+import 'package:travilo/features/auth/presentation/bloc/login_cubit.dart';
+import 'package:travilo/features/auth/presentation/bloc/login_state.dart';
 import 'package:travilo/features/auth/presentation/views/sign_up_view.dart';
 import 'package:travilo/features/auth/presentation/views/widgets/log_in_widgets/custom_forget_password_widget.dart';
 import 'package:travilo/core/widgets/custom_button.dart';
@@ -23,19 +26,19 @@ class _SignInViewBodyState extends State<SignInViewBody> {
   late TextEditingController passwordController;
 
   bool visible = true;
-  bool rememberMe = false;
 
   @override
   void initState() {
+    super.initState();
     emailController = TextEditingController();
     passwordController = TextEditingController();
-    super.initState();
   }
 
   @override
   void dispose() {
     emailController.dispose();
     passwordController.dispose();
+
     super.dispose();
   }
 
@@ -46,73 +49,81 @@ class _SignInViewBodyState extends State<SignInViewBody> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: const Color(0xff102D4A),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(24.0),
-                  child: SvgPicture.asset(AppImages.loginLogoImage),
-                ),
+      child: BlocConsumer<LoginCubit, LoginState>(
+        listener: (context, state) {
+          if (state is LoginError) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(state.message),
+                backgroundColor: Colors.red,
               ),
+            );
+          }
 
-              const SizedBox(height: 24),
-
-              Text("Welcome Back", style: AppStyles.textStyleBold24),
-
-              const SizedBox(height: 24),
-
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Email", style: AppStyles.textStyleSemiBold16),
+          if (state is LoginSucsess) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Login successful'),
+                backgroundColor: Colors.green,
               ),
-              const SizedBox(height: 8),
-              EmailField(emailController: emailController),
+            );
 
-              const SizedBox(height: 24),
+            emailController.clear();
+            passwordController.clear();
+          }
+        },
+        builder: (context, state) {
+          if (state is LoginLoading) {
+            return const Center(child: CircularProgressIndicator());
+          }
 
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("password", style: AppStyles.textStyleSemiBold16),
+          return SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                children: [
+                  const SizedBox(height: 40),
+                  SvgPicture.asset(AppImages.loginLogoImage),
+                  const SizedBox(height: 24),
+                  Text("Welcome Back", style: AppStyles.textStyleBold24),
+                  const SizedBox(height: 24),
+                  EmailField(emailController: emailController),
+                  const SizedBox(height: 16),
+                  PasswordField(
+                    passwordController: passwordController,
+                    visible: visible,
+                    toggleVisibility: toggleVisibility,
+                  ),
+                  const SizedBox(height: 16),
+                  const Align(
+                    alignment: Alignment.topRight,
+                    child: CustomForgetPasswordWidget(),
+                  ),
+                  const SizedBox(height: 24),
+                  CustomButton(
+                    onTap: () {
+                      context.read<LoginCubit>().login(
+                        emailController.text.trim(),
+                        passwordController.text.trim(),
+                      );
+                    },
+                    text: "Sign In",
+                  ),
+                  const SizedBox(height: 20),
+                  const SocialButtonsRow(),
+                  const SizedBox(height: 20),
+                  CustomTextButtonNavigation(
+                    text: "Don’t have an account? ",
+                    textButton: "Sign Up",
+                    onTap: () {
+                      Navigator.of(context).pushNamed(SignUpView.routeName);
+                    },
+                  ),
+                ],
               ),
-              const SizedBox(height: 8),
-              PasswordField(
-                passwordController: passwordController,
-                visible: visible,
-                toggleVisibility: toggleVisibility,
-              ),
-
-              const SizedBox(height: 8),
-              Align(
-                alignment: Alignment.topRight,
-                child: CustomForgetPasswordWidget(),
-              ),
-
-              const SizedBox(height: 24),
-              CustomButton(onTap: () {}, text: "Sign In"),
-
-              const SizedBox(height: 24),
-
-              const SocialButtonsRow(),
-
-              const SizedBox(height: 20),
-              CustomTextButtonNavigation(
-                text: "Don’t have an account? ",
-                textButton: "Sign Up",
-                onTap: () {
-                  Navigator.of(context).pushNamed(SignUpView.routeName);
-                },
-              ),
-            ],
-          ),
-        ),
+            ),
+          );
+        },
       ),
     );
   }

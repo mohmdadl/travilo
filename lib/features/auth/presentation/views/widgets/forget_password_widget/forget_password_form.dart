@@ -5,7 +5,8 @@ import '../../../../../../core/utils/styles.dart';
 import '../../../../../../core/widgets/custom_text_form_field.dart';
 
 class ForgetPasswordForm extends StatelessWidget {
-  const ForgetPasswordForm({super.key});
+  final TextEditingController controller; // استقبل الهدية
+  const ForgetPasswordForm({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
