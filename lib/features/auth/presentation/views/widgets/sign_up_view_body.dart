@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travilo/core/utils/styles.dart';
-import 'package:travilo/core/utils/widgets/custom_button.dart';
+import 'package:travilo/core/widgets/custom_button.dart';
 import 'package:travilo/features/auth/presentation/bloc/auth_cubit.dart';
 import 'package:travilo/features/auth/presentation/bloc/auth_state.dart';
 

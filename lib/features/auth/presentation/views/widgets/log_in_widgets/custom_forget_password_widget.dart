@@ -8,12 +8,16 @@ class CustomForgetPasswordWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  InkWell(
+    return InkWell(
       onTap: () {
         Navigator.of(context).pushNamed(ForgetPasswordView.routeName);
       },
-      child:  Text("Forgot Password ?",style:AppStyles.textStyleExtraLight16.copyWith(color: Color(0xff137CE6)),),
-    );
+      child: Text(
+        "Forgot Password ?",
+        style: AppStyles.textStyleExtraLight16.copyWith(
+          color: Color(0xff137CE6),
+        ),
+      ),
     );
   }
 }
