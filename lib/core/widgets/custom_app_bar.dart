@@ -5,10 +5,16 @@ import '../utils/app_color.dart';
 import '../utils/styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key, required this.title, this.withIcon = false});
+  const CustomAppBar({
+    super.key,
+    required this.title,
+    this.withIcon = false,
+    this.actions,
+  });
 
   final String title;
   final bool withIcon;
+  final List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +26,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         onPressed: () => Navigator.pop(context),
         icon: const Icon(Icons.arrow_back_ios, color: AppColors.primaryColor),
       ),
-      actions: [
-        withIcon
-            ? IconButton(
-                padding: const EdgeInsets.only(right: 32),
-                onPressed: () {},
-                icon: Image.asset(AppImages.nightModeIcon),
-              )
-            : const SizedBox(),
-      ],
+      actions:
+          actions ??
+          [
+            withIcon
+                ? IconButton(
+                    padding: const EdgeInsets.only(right: 32),
+                    onPressed: () {},
+                    icon: Image.asset(AppImages.nightModeIcon),
+                  )
+                : const SizedBox(),
+          ],
       title: Text(
         title,
         style: AppStyles.textStyleMedium20.copyWith(

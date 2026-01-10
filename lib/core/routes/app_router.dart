@@ -23,6 +23,9 @@ import 'package:travilo/features/ai_planner/presentation/views/ai_planner_view.d
 import 'package:travilo/features/search/presentation/views/search_view.dart';
 import 'package:travilo/features/auth/presentation/views/sign_in_view.dart';
 import '../../features/auth/presentation/views/sign_up_view.dart';
+import 'package:travilo/features/hotels/presentation/views/hotels_view.dart';
+import 'package:travilo/features/events/presentation/views/events_view.dart';
+import 'package:travilo/features/monuments/presentation/views/monuments_view.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
@@ -95,6 +98,12 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const PaymentFailureView(),
       );
+    case HotelsView.routeName:
+      return MaterialPageRoute(builder: (context) => const HotelsView());
+    case EventsView.routeName:
+      return MaterialPageRoute(builder: (context) => const EventsView());
+    case MonumentsView.routeName:
+      return MaterialPageRoute(builder: (context) => const MonumentsView());
 
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());

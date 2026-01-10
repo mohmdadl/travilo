@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class CardItem extends StatelessWidget {
   final String title;
   final String offer;
@@ -11,17 +9,21 @@ class CardItem extends StatelessWidget {
   final double price;
   final String imagePath;
   final VoidCallback onViewDetailsPressed;
+  final Color? badgeColor;
+  final Color? badgeTextColor;
 
   const CardItem({
     super.key,
     required this.title,
     required this.location,
-   
     required this.rating,
     required this.reviewsCount,
     required this.price,
     required this.imagePath,
-    required this.onViewDetailsPressed, required this.offer,
+    required this.onViewDetailsPressed,
+    required this.offer,
+    this.badgeColor,
+    this.badgeTextColor,
   });
 
   @override
@@ -29,7 +31,7 @@ class CardItem extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
 
     return Container(
-      width: width, 
+      width: width,
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         color: const Color(0xFF192633),
@@ -45,8 +47,7 @@ class CardItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
-       
+          // Image Section
           Stack(
             children: [
               ClipRRect(
@@ -60,7 +61,6 @@ class CardItem extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-
               Positioned(
                 top: 12,
                 left: 12,
@@ -70,30 +70,45 @@ class CardItem extends StatelessWidget {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    color: badgeColor ?? Colors.orange,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child:  Text(
+                  child: Text(
                     offer,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: badgeTextColor ?? Colors.white,
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ),
+              Positioned(
+                top: 12,
+                right: 12,
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.favorite_border,
+                    color: Colors.black,
+                    size: 20,
+                  ),
+                ),
+              ),
             ],
           ),
 
-          /// محتوى الكارد
+          // Content body - directly below image, no separation container
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
-                /// العنوان
+                // Title
                 Text(
                   title,
                   style: const TextStyle(
@@ -104,17 +119,13 @@ class CardItem extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
-
                 const SizedBox(height: 10),
 
-                /// location + category
+                // Location
                 Row(
                   children: [
-                    const Icon(Icons.location_on,
-                        size: 18, color: Colors.grey),
+                    const Icon(Icons.location_on, size: 18, color: Colors.grey),
                     const SizedBox(width: 4),
-
-                    /// location text
                     Expanded(
                       flex: 3,
                       child: Text(
@@ -127,21 +138,14 @@ class CardItem extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
-
-                    const SizedBox(width: 8),
-
-                    /// category badge
-                   
                   ],
                 ),
-
                 const SizedBox(height: 14),
 
-                /// rating
+                // Rating
                 Row(
                   children: [
-                    const Icon(Icons.star,
-                        size: 20, color: Colors.amber),
+                    const Icon(Icons.star, size: 20, color: Colors.amber),
                     const SizedBox(width: 6),
                     Text(
                       rating.toString(),
@@ -154,37 +158,24 @@ class CardItem extends StatelessWidget {
                     const SizedBox(width: 6),
                     Text(
                       '($reviewsCount reviews)',
-                      style: const TextStyle(
-                        color: Colors.grey,
-                        fontSize: 14,
-                      ),
+                      style: const TextStyle(color: Colors.grey, fontSize: 14),
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 18),
 
-                /// price + button
+                // Price + Button
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    /// price
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                       
-                        Text(
-                          '\$$price / person',
-                          style: const TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                    Text(
+                      '\$$price / room', // Updated text to match screenshot "Room" vs "Person" if needed, keeping as implies
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
-
-                    /// button
                     ElevatedButton(
                       onPressed: onViewDetailsPressed,
                       style: ElevatedButton.styleFrom(

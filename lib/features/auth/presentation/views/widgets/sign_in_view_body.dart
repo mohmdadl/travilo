@@ -70,6 +70,11 @@ class _SignInViewBodyState extends State<SignInViewBody> {
 
             emailController.clear();
             passwordController.clear();
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              'home_layout',
+              (route) => false,
+            );
           }
         },
         builder: (context, state) {

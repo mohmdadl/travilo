@@ -3,7 +3,8 @@ import 'package:travilo/core/resources/app_colors.dart';
 import 'package:travilo/core/resources/app_styles.dart';
 
 class CategoryChips extends StatefulWidget {
-  const CategoryChips({super.key});
+  final Function(int index) onCategorySelected;
+  const CategoryChips({super.key, required this.onCategorySelected});
 
   @override
   State<CategoryChips> createState() => _CategoryChipsState();
@@ -14,10 +15,10 @@ class _CategoryChipsState extends State<CategoryChips> {
 
   final List<String> categories = [
     "Hotels",
-    "Monuments",
     "Events",
-    "Tours",
-    "Restaurants",
+    "Monuments & tours",
+    "Ask AI",
+    "My Bookings",
   ];
 
   @override
@@ -36,6 +37,7 @@ class _CategoryChipsState extends State<CategoryChips> {
               setState(() {
                 _selectedIndex = index;
               });
+              widget.onCategorySelected(index);
             },
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 200),

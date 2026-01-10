@@ -4,17 +4,22 @@ import 'package:travilo/core/resources/app_colors.dart';
 import 'package:travilo/core/routes/app_router.dart';
 import 'package:travilo/core/network/dio_client.dart';
 import 'package:travilo/core/utils/pref_helper.dart';
-import 'package:travilo/features/auth/presentation/views/sign_up_view.dart';
+import 'package:travilo/features/auth/presentation/views/sign_in_view.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await PrefHelper.init();
   DioClient.init();
-  runApp(const MyApp());
+  final token = PrefHelper.getToken();
+  runApp(
+    MyApp(initialRoute: token != null ? 'home_layout' : SignInView.routeName),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final String initialRoute;
+  const MyApp({super.key, required this.initialRoute});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +31,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
       ),
       onGenerateRoute: onGenerateRoutes,
-      initialRoute: SignUpView.routeName,
+      initialRoute: initialRoute,
     );
   }
 }
